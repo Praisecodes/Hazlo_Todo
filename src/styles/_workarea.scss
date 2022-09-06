@@ -13,8 +13,52 @@
         background-color: var(--lightModeBg);
         .header{
             background-color: white;
-            padding: 20px;
+            padding: 10px 17px;
             box-shadow: 0 0 5px 1px #44444422;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            form{
+                input{
+                    border: 0;
+                    outline: 0;
+                    padding: 15px 10px;
+                    width: 17rem;
+                    margin: 0 .5rem;
+                    background-color: #eeeeee;
+                    font-family: Arial;
+                    font-size: 14px;
+                }
+                button{
+                    color: white;
+                    background-color: var(--sideNavColor);
+                    border-radius: 4px;
+                    padding: 12px 15px;
+                    border: 0;
+                    font-size: 14px;
+                    cursor: pointer;
+                    font-family: Arial;
+                    font-weight: 400;
+                }
+            }
+            .header_menu{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: fit-content;
+                i{
+                    font-size: 20px;
+                    margin: 0 10px;
+                    color: var(--sideNavColor);
+                    padding: 5px;
+                    cursor: pointer;
+                }
+                p{
+                    font-size: 17px;
+                    font-family: Arial;
+                    font-weight: 700;
+                }
+            }
         }
     }
 }

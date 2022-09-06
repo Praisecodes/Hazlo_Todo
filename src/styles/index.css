@@ -436,6 +436,50 @@ body {
 }
 .container .mainContainer .header {
   background-color: white;
-  padding: 20px;
+  padding: 10px 17px;
   box-shadow: 0 0 5px 1px rgba(68, 68, 68, 0.1333333333);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .mainContainer .header form input {
+  border: 0;
+  outline: 0;
+  padding: 15px 10px;
+  width: 17rem;
+  margin: 0 0.5rem;
+  background-color: #eeeeee;
+  font-family: Arial;
+  font-size: 14px;
+}
+.container .mainContainer .header form button {
+  color: white;
+  background-color: var(--sideNavColor);
+  border-radius: 4px;
+  padding: 12px 15px;
+  border: 0;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: Arial;
+  font-weight: 400;
+}
+.container .mainContainer .header .header_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.container .mainContainer .header .header_menu i {
+  font-size: 20px;
+  margin: 0 10px;
+  color: var(--sideNavColor);
+  padding: 5px;
+  cursor: pointer;
+}
+.container .mainContainer .header .header_menu p {
+  font-size: 17px;
+  font-family: Arial;
+  font-weight: 700;
 }/*# sourceMappingURL=index.css.map */
