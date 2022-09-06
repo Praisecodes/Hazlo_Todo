@@ -1,0 +1,418 @@
+:root {
+  --colorMain: #292929;
+  --fontColor: #545454;
+  --authBg: #171717;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: light;
+}
+
+body {
+  font-size: 16px;
+  font-family: Arial;
+}
+
+.homeTopper {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  background-color: white;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.0666666667);
+}
+.homeTopper h2 {
+  color: var(--fontColor);
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.homeTopper h2 img {
+  margin: 0 0.3rem;
+  height: 70%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.homeTopper ul {
+  list-style-type: none;
+}
+.homeTopper ul li {
+  color: var(--fontColor);
+  float: left;
+  padding: 0 1rem;
+  font-weight: 700;
+  margin: auto 0.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.homeTopper ul li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: var(--fontColor);
+  transition: 0.2s;
+}
+.homeTopper ul li:hover::after {
+  width: 100%;
+}
+.homeTopper .actionButtons {
+  padding: 0 0.5rem;
+}
+.homeTopper .actionButtons .buttons {
+  margin: 0 0.5rem;
+  padding: 7px 10px;
+  font-size: 17px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 3px;
+}
+.homeTopper .actionButtons .loginbtn {
+  color: white;
+  background-color: var(--colorMain);
+  border: 1px solid var(--colorMain);
+}
+.homeTopper .actionButtons .signupbtn {
+  background-color: transparent;
+  border: 1px solid var(--colorMain);
+}
+
+.introSection {
+  display: flex;
+}
+.introSection .introContent {
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--colorMain);
+  font-family: tahoma;
+  padding: 0 2.5rem;
+}
+.introSection .left {
+  width: 60vw;
+}
+.introSection .left h1 {
+  font-size: 3.5rem;
+  padding: 1.5rem 0;
+}
+.introSection .left p {
+  font-size: 16px;
+  padding: 1.5rem 0;
+  font-family: Arial;
+}
+.introSection .left button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 13px 20px;
+  font-family: Arial;
+  color: white;
+  background-color: var(--colorMain);
+  border: 0;
+  border-radius: 3px;
+  font-size: 17px;
+  margin: 0.4rem 0;
+  cursor: pointer;
+}
+.introSection .right {
+  width: 40vw;
+  background-image: url("../../right1.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.aboutSection {
+  display: flex;
+}
+.aboutSection .aboutContent {
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem;
+  font-family: Arial;
+  color: var(--colorMain);
+}
+.aboutSection .left {
+  width: 45vw;
+  background-image: url("../../about-left.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.aboutSection .right {
+  width: 55vw;
+}
+.aboutSection .right h2, .aboutSection .right p {
+  padding: 2rem 0;
+}
+.aboutSection .right h2 {
+  font-weight: 700;
+  line-height: 36.8px;
+}
+.aboutSection .right p {
+  width: 88%;
+  font-weight: 400;
+}
+
+.supportSection {
+  margin: 1rem 0;
+  display: flex;
+}
+.supportSection .supportContent {
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.supportSection .right {
+  background-image: url("../../support-right.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 45vw;
+}
+.supportSection .left {
+  width: 55vw;
+}
+.supportSection .left form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.supportSection .left form input {
+  width: 100%;
+  padding: 10px;
+  margin: 1rem 0;
+  outline: 0;
+  border: 0;
+  background-color: #ededed;
+  color: var(--colorMain);
+  font-size: 15px;
+  font-family: Arial;
+  font-weight: 700;
+}
+.supportSection .left form textarea {
+  width: 100%;
+  padding: 10px;
+  height: 10rem;
+  font-size: 15px;
+  font-weight: 700;
+  outline: 0;
+  border: 0;
+  background-color: #ededed;
+  font-family: Arial;
+}
+.supportSection .left form button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px auto;
+  border: 0;
+  background-color: var(--colorMain);
+  color: white;
+  font-family: Arial;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.foot {
+  background-color: var(--colorMain);
+}
+.foot p {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 0;
+  margin: 0 auto;
+  color: white;
+  font-family: tahoma;
+  font-size: 14px;
+}
+
+.loginContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--authBg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginContainer .container {
+  background-color: white;
+  width: 50rem;
+  max-width: 95%;
+  height: 30rem;
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+}
+.loginContainer .container .left {
+  width: 40%;
+  height: 100%;
+  background-color: var(--colorMain);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Arial;
+}
+.loginContainer .container .left img {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 1rem;
+}
+.loginContainer .container .right {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial;
+  justify-content: center;
+  padding: 0 2rem;
+}
+.loginContainer .container .right h2 {
+  font-weight: 700;
+  width: 90%;
+  margin: 0 auto;
+}
+.loginContainer .container .right form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+}
+.loginContainer .container .right form input {
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid #767676;
+  padding: 10px;
+  width: 100%;
+  margin: 1.3rem 0;
+  font-family: Arial;
+  font-weight: 700;
+  color: var(--colorMain);
+  font-size: 15px;
+}
+.loginContainer .container .right form button {
+  color: white;
+  background-color: var(--colorMain);
+  padding: 10px 0;
+  width: 98%;
+  margin: 1rem;
+  border: 0;
+  outline: 0;
+  font-family: Arial;
+  font-size: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.loginContainer .container .right form p {
+  font-size: 14px;
+  font-weight: 400;
+}
+.loginContainer .container .right form p span {
+  color: blue;
+  cursor: pointer;
+}
+
+.signupContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--authBg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signupContainer .container {
+  width: 50rem;
+  max-width: 95%;
+  height: 30rem;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+}
+.signupContainer .container .left {
+  width: 60%;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.signupContainer .container .left h2 {
+  width: 80%;
+  margin: 0 auto;
+}
+.signupContainer .container .left form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+}
+.signupContainer .container .left form input {
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border-bottom: 1px solid #767676;
+  margin: 0.7rem 0;
+  font-size: 15px;
+  font-family: Arial;
+  font-weight: 700;
+  outline: 0;
+}
+.signupContainer .container .left form button {
+  padding: 10px 0;
+  width: 98%;
+  color: white;
+  background-color: var(--colorMain);
+  border: 0;
+  outline: 0;
+  border-radius: 3px;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: Arial;
+}
+.signupContainer .container .left form p {
+  font-size: 14px;
+  padding: 0.7rem 0;
+}
+.signupContainer .container .left form p span {
+  color: blue;
+  cursor: pointer;
+}
+.signupContainer .container .right {
+  width: 40%;
+  height: 100%;
+  background-color: var(--colorMain);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.signupContainer .container .right img {
+  margin-right: 1rem;
+}/*# sourceMappingURL=index.css.map */

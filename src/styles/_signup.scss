@@ -1,0 +1,79 @@
+.signupContainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--authBg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container{
+        width: 50rem;
+        max-width: 95%;
+        height: 30rem;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        overflow: hidden;
+        .left{
+            width: 60%;
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2{
+                width: 80%;
+                margin: 0 auto;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                margin: 0 auto;
+                align-items: center;
+                input{
+                    width: 100%;
+                    padding: 10px;
+                    border: 0;
+                    border-bottom: 1px solid #767676;
+                    margin: .7rem 0;
+                    font-size: 15px;
+                    font-family: Arial;
+                    font-weight: 700;
+                    outline: 0;
+                }
+                button{
+                    padding: 10px 0;
+                    width: 98%;
+                    color: white;
+                    background-color: var(--colorMain);
+                    border: 0;
+                    outline: 0;
+                    border-radius: 3px;
+                    margin: .5rem 0;
+                    cursor: pointer;
+                    font-size: 17px;
+                    font-family: Arial;
+                }
+                p{
+                    font-size: 14px;
+                    padding: .7rem 0;
+                    span{
+                        color: blue;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .right{
+            width: 40%;
+            height: 100%;
+            background-color: var(--colorMain);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            img{
+                margin-right: 1rem;
+            }
+        }
+    }
+}
