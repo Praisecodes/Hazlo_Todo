@@ -1,4 +1,4 @@
-import {FaBell, FaMoon} from "react-icons/fa"
+import {FaBell, FaMoon, FaAngleDown} from "react-icons/fa"
 
 function Header(){
     return (
@@ -12,6 +12,10 @@ function Header(){
                 <i><FaMoon /></i>
                 <i><FaBell /></i>
                 <p>Christian</p>
+                <div className="circle_dropdown">
+                    <div className="circle"></div>
+                    <i><FaAngleDown /></i>
+                </div>
             </div>
         </div>
         </>

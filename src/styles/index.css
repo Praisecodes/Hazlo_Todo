@@ -482,4 +482,20 @@ body {
   font-size: 17px;
   font-family: Arial;
   font-weight: 700;
+}
+.container .mainContainer .header .header_menu .circle_dropdown {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 1rem;
+  cursor: pointer;
+}
+.container .mainContainer .header .header_menu .circle_dropdown .circle {
+  height: 50px;
+  width: 50px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+}
+.container .mainContainer .header .header_menu .circle_dropdown i {
+  font-size: 20px;
+  margin: 0;
 }/*# sourceMappingURL=index.css.map */
