@@ -3,12 +3,53 @@
     height: 100vh;
     display: flex;
     .sideNav{
-        width: 23vw;
+        width: 20vw;
         height: 100%;
         background-color: var(--sideNavColor);
+        overflow-x: hidden;
+        overflow-y: scroll;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        .logoSection{
+            width: fit-content;
+            margin: 1.5rem auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            img{
+                width: 70%;
+                height: 70%;
+                margin: .5rem 0;
+            }
+        }
+        .sections{
+            color: white;
+            padding: 1rem 0;
+            cursor: pointer;
+            margin: .8rem 0;
+            transition: .2s;
+            &:hover{
+                background-color: var(--hoverInDark);
+            }
+            p{
+                font-size: 1.3rem;
+                margin: auto;
+                width: 80%;
+                text-align: left;
+                padding: 0 2.5rem;
+                display: flex;
+                align-items: center;
+                i{
+                    margin: 0 1.5rem 0 0;
+                    font-size: 1.4rem;
+                }
+            }
+        }
     }
     .mainContainer{
-        width: 77vw;
+        width: 80vw;
         height: 100%;
         background-color: var(--lightModeBg);
         .header{
