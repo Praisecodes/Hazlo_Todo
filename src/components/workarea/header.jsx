@@ -1,7 +1,7 @@
 function Header(){
     return (
         <>
-        <div className="workarea_header">
+        <div className="header">
             
         </div>
         </>

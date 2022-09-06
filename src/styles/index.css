@@ -2,6 +2,8 @@
   --colorMain: #292929;
   --fontColor: #545454;
   --authBg: #171717;
+  --sideNavColor: #242C39;
+  --lightModeBg: #F4F5FF;
 }
 
 * {
@@ -417,8 +419,23 @@ body {
   margin-right: 1rem;
 }
 
-.workarea_header {
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.container .sideNav {
+  width: 23vw;
+  height: 100%;
+  background-color: var(--sideNavColor);
+}
+.container .mainContainer {
+  width: 77vw;
+  height: 100%;
+  background-color: var(--lightModeBg);
+}
+.container .mainContainer .header {
   background-color: white;
-  height: 40px;
-  box-shadow: 0 0 5px 1px black;
+  padding: 20px;
+  box-shadow: 0 0 5px 1px rgba(68, 68, 68, 0.1333333333);
 }/*# sourceMappingURL=index.css.map */

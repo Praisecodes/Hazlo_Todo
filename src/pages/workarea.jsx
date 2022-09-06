@@ -1,5 +1,6 @@
 import {Helmet} from "react-helmet"
-import Header from "../components/workarea/header"
+import SideNav from "../components/workarea/sidenav"
+import MainContainer from "../components/workarea/mainContainer"
 
 function Workarea(){
     return (
@@ -8,7 +9,10 @@ function Workarea(){
             <title>Hazlo Todo | Workarea</title>
         </Helmet>
 
-        <Header />
+        <div className="container">
+            <SideNav />
+            <MainContainer />
+        </div>
         </>
     )
 }
