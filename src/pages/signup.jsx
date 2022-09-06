@@ -17,7 +17,7 @@ function Signup(){
             <div className="container">
                 <div className="left">
                     <h2>Sign Up</h2>
-                    <form onSubmit={(e)=>{e.preventDefault()}}>
+                    <form onSubmit={(e)=>{e.preventDefault(); navigate('/login')}}>
                         <input type="text" placeholder="Enter Your Fullname" />
                         <input type="email" placeholder="Enter Your Email" />
                         <input type="text" placeholder="Enter Your Username" />
