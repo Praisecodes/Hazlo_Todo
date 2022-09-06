@@ -415,4 +415,10 @@ body {
 }
 .signupContainer .container .right img {
   margin-right: 1rem;
+}
+
+.workarea_header {
+  background-color: white;
+  height: 40px;
+  box-shadow: 0 0 5px 1px black;
 }/*# sourceMappingURL=index.css.map */
