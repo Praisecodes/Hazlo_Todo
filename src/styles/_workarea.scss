@@ -26,25 +26,18 @@
         }
         .sections{
             color: white;
-            padding: 1rem 0;
+            padding: 1.3rem 2.2rem;
             cursor: pointer;
             margin: .8rem 0;
             transition: .2s;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
             &:hover{
                 background-color: var(--hoverInDark);
             }
-            p{
-                font-size: 1.3rem;
-                margin: auto;
-                width: 80%;
-                text-align: left;
-                padding: 0 2.5rem;
-                display: flex;
-                align-items: center;
-                i{
-                    margin: 0 1.5rem 0 0;
-                    font-size: 1.4rem;
-                }
+            i{
+                margin-right: 1rem;
             }
         }
     }

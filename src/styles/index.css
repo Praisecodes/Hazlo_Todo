@@ -457,26 +457,19 @@ body {
 }
 .container .sideNav .sections {
   color: white;
-  padding: 1rem 0;
+  padding: 1.3rem 2.2rem;
   cursor: pointer;
   margin: 0.8rem 0;
   transition: 0.2s;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
 }
 .container .sideNav .sections:hover {
   background-color: var(--hoverInDark);
 }
-.container .sideNav .sections p {
-  font-size: 1.3rem;
-  margin: auto;
-  width: 80%;
-  text-align: left;
-  padding: 0 2.5rem;
-  display: flex;
-  align-items: center;
-}
-.container .sideNav .sections p i {
-  margin: 0 1.5rem 0 0;
-  font-size: 1.4rem;
+.container .sideNav .sections i {
+  margin-right: 1rem;
 }
 .container .mainContainer {
   width: 80vw;

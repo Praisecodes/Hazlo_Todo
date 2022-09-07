@@ -1,7 +1,12 @@
 import Logo from "../../assets/hazlo-logo.svg"
-import {FaHome, FaChartBar, FaArchive, FaTrash, FaStar, FaCheckCircle} from "react-icons/fa"
+import {FaHome, FaChartBar, FaArchive, FaTrash, FaStar, FaCheckCircle, FaArrowsAltH} from "react-icons/fa"
 
 function SideNav(){
+
+    const SwitchUp = (events, ele1, ele2, ele3, ele4) =>{
+        events.target.classList.add("selected")
+    }
+    
     return (
         <>
         <div className="sideNav">
@@ -9,42 +14,30 @@ function SideNav(){
                 <img src={Logo} alt="" />
                 <h2>Hazlo Todo</h2>
             </div> <br /><br />
-            <div className="sections selected">
-                <p>
-                    <i><FaHome /></i>
-                    Dashboard
-                </p>
-            </div>
-            <div className="sections">
-                <p>
-                    <i><FaChartBar /></i>
-                    Activies
-                </p>
-            </div>
-            <div className="sections">
-                <p>
-                    <i><FaArchive /></i>
-                    Archives
-                </p>
-            </div>
-            <div className="sections">
-                <p>
-                    <i><FaTrash /></i>
-                    Trash Bin
-                </p>
-            </div>
-            <div className="sections">
-                <p>
-                    <i><FaStar /></i>
-                    Starred
-                </p>
-            </div>
-            <div className="sections">
-                <p>
-                    <i><FaCheckCircle /></i>
-                    Completed
-                </p>
-            </div>
+            <p className="sections selected" onClick={SwitchUp}>
+                <i><FaHome/></i>
+                Dashboard
+            </p>
+            <p className="sections" onClick={SwitchUp}>
+                <i><FaChartBar/></i>
+                Activities
+            </p>
+            <p className="sections" onClick={SwitchUp}>
+                <i><FaArchive/></i>
+                Archives
+            </p>
+            <p className="sections">
+                <i><FaTrash /></i>
+                Trash Bin
+            </p>
+            <p className="sections">
+                <i><FaStar /></i>
+                Starred
+            </p>
+            <p className="sections">
+                <i><FaCheckCircle/></i>
+                Completed
+            </p>
         </div>
         </>
     )
