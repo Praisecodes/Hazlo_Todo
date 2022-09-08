@@ -10,8 +10,8 @@ function Workarea(){
         </Helmet>
 
         <div className="container">
-            <SideNav />
             <MainContainer />
+            <SideNav />
         </div>
         </>
     )
