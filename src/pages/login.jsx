@@ -22,7 +22,7 @@ function Login(){
                 </div>
                 <div className="right">
                     <h2>Login</h2>
-                    <form onSubmit={(e)=>{e.preventDefault(); nav("/workarea")}}>
+                    <form onSubmit={(e)=>{e.preventDefault()}}>
                         <input type="email" placeholder="Enter Your Email" />
                         <input type="password" placeholder="Enter Your Password" />
                         <button type="submit">Login</button>

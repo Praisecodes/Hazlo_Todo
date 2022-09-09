@@ -8,6 +8,10 @@ function Header(){
         navigate("/login")
     }
 
+    function toSignup(){
+        navigate("/signup")
+    }
+
     return (
         <div className="homeTopper">
             <h2>
@@ -20,7 +24,7 @@ function Header(){
             </ul>
             <div className="actionButtons">
                 <button onClick={toLogin} className="buttons loginbtn">Login</button>
-                <button className="buttons signupbtn">Sign Up</button>
+                <button onClick={toSignup} className="buttons signupbtn">Sign Up</button>
             </div>
         </div>
     )
