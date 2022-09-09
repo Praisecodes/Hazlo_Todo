@@ -18,22 +18,22 @@ export default function SideNav(props){
                 Dashboard
             </Link>
 
-            <Link to="./" className={(props.section == "activities") ? "sideOption selected" : "sideOption"}>
+            <Link to="/activities" className={(props.section == "activities") ? "sideOption selected" : "sideOption"}>
                 <i><FaChartBar /></i>
                 Activities
             </Link>
 
-            <Link to="./" className={(props.section == "archives") ? "sideOption selected" : "sideOption"}>
+            <Link to="/archives" className={(props.section == "archives") ? "sideOption selected" : "sideOption"}>
                 <i><FaArchive /></i>
                 Archives
             </Link>
 
-            <Link to="./" className={(props.section == "trashBin") ? "sideOption selected" : "sideOption"}>
+            <Link to="/trashbin" className={(props.section == "trashBin") ? "sideOption selected" : "sideOption"}>
                 <i><FaTrash /></i>
                 Trash Bin
             </Link>
 
-            <Link to="./" className={(props.section == "starred") ? "sideOption selected" : "sideOption"}>
+            <Link to="/starred" className={(props.section == "starred") ? "sideOption selected" : "sideOption"}>
                 <i><FaStar /></i>
                 Starred
             </Link>
