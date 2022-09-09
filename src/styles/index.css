@@ -477,6 +477,7 @@ body {
 }
 .container .sidenav .sideOption i {
   margin-right: 1rem;
+  font-size: 1.7rem;
 }
 .container .sidenav .sideOption:hover {
   background-color: var(--hoverInDark);
