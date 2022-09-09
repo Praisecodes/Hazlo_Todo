@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import SideNav from "../components/sidenav";
+import Header from "../components/header"
 
 export default function Starred(){
     return (
@@ -10,6 +11,10 @@ export default function Starred(){
 
         <div className="container">
             <SideNav section="starred" />
+
+            <div className="mainContainer">
+                <Header />
+            </div>
         </div>
         </>
     )

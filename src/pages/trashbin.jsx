@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import SideNav from "../components/sidenav";
+import Header from "../components/header"
 
 export default function TrashBin(){
     return (
@@ -10,6 +11,10 @@ export default function TrashBin(){
 
         <div className="container">
             <SideNav section="trashBin" />
+
+            <div className="mainContainer">
+                <Header />
+            </div>
         </div>
         </>
     )

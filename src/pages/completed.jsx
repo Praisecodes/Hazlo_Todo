@@ -1,5 +1,6 @@
 import SideNav from "../components/sidenav";
 import { Helmet } from "react-helmet";
+import Header from "../components/header"
 
 export default function Completed(){
     return (
@@ -10,6 +11,10 @@ export default function Completed(){
 
         <div className="container">
             <SideNav section="completed" />
+
+            <div className="mainContainer">
+                <Header />
+            </div>
         </div>
         </>
     )

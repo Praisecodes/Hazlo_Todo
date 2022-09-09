@@ -481,4 +481,36 @@ body {
 }
 .container .sidenav .sideOption:hover {
   background-color: var(--hoverInDark);
+}
+.container .mainContainer {
+  width: 77vw;
+  height: 100%;
+  background-color: var(--lightModeBg);
+}
+.container .mainContainer .header {
+  padding: 0.8rem 1.3rem;
+  box-shadow: 0 0 5px 1px rgba(68, 68, 68, 0.1333333333);
+  background-color: white;
+}
+.container .mainContainer .header form {
+  display: flex;
+}
+.container .mainContainer .header form input {
+  width: 15rem;
+  outline: 0;
+  padding: 10px;
+  font-size: 16px;
+  font-family: Arial;
+  font-weight: 200;
+  margin: 0 5px;
+  border: 0;
+  background-color: var(--lightModeBg);
+}
+.container .mainContainer .header form button {
+  color: white;
+  background-color: var(--colorMain);
+  border: 0;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-family: Arial;
 }/*# sourceMappingURL=index.css.map */
