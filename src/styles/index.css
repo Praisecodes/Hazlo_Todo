@@ -423,4 +423,61 @@ body {
 }
 .signupContainer .container .right img {
   margin-right: 1rem;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.container .sidenav {
+  width: 23vw;
+  height: 100%;
+  background-color: var(--sideNavColor);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.container .sidenav::-webkit-scrollbar {
+  width: 5px;
+}
+.container .sidenav::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2666666667);
+}
+.container .sidenav .logoDiv {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: Arial;
+  margin: 1.8rem auto;
+}
+.container .sidenav .logoDiv img {
+  width: 70%;
+  height: 70%;
+}
+.container .sidenav .logoDiv h1 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+.container .sidenav .sideOption {
+  color: white;
+  font-family: Arial;
+  padding: 1.3rem 2.6rem;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.container .sidenav .sideOption i {
+  margin-right: 1rem;
+}
+.container .sidenav .sideOption:hover {
+  background-color: var(--hoverInDark);
 }/*# sourceMappingURL=index.css.map */

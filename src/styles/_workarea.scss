@@ -1,0 +1,54 @@
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    .sidenav{
+        width: 23vw;
+        height: 100%;
+        background-color: var(--sideNavColor);
+        overflow-x: hidden;
+        overflow-y: scroll;
+        &::-webkit-scrollbar{
+            width: 5px;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: #ffffff44;
+        }
+        .logoDiv{
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            font-family: Arial;
+            margin: 1.8rem auto;
+            img{
+                width: 70%;
+                height: 70%;
+            }
+            h1{
+                font-size: 1.8rem;
+                margin: 1rem 0;
+            }
+        }
+        .sideOption{
+            color: white;
+            font-family: Arial;
+            padding: 1.3rem 2.6rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            margin: .5rem 0;
+            cursor: pointer;
+            transition: .3s;
+            text-decoration: none;
+            i{
+                margin-right: 1rem;
+            }
+            &:hover{
+                background-color: var(--hoverInDark);
+            }
+        }
+    }
+}
