@@ -559,22 +559,25 @@ body {
   align-items: center;
 }
 .container .mainContainer .mainContent {
-  height: calc(100vh - 76px);
+  height: calc(100vh - 108px);
   background-color: transparent;
 }
 .container .mainContainer .dashboard {
-  padding: 2rem 2.5rem;
+  padding: 1rem 1.5rem;
 }
 .container .mainContainer .dashboard .welcome {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .container .mainContainer .dashboard .welcome .welcomeMsg {
   background-color: white;
-  padding: 0.5rem 1.5rem;
+  padding: 0.2rem 1rem;
   display: flex;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 5px;
+  margin: 0.5rem 0;
 }
 .container .mainContainer .dashboard .welcome .welcomeMsg .message p {
   font-family: Arial;
@@ -605,4 +608,25 @@ body {
 .container .mainContainer .dashboard .welcome .welcomeMsg .image img {
   width: 100%;
   height: 100%;
+}
+.container .mainContainer .dashboard .welcome .create {
+  color: #ffcc00;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px dashed #ffcc00;
+  margin: 0.5rem 0;
+}
+.container .mainContainer .dashboard .welcome .create i {
+  padding: 15px;
+  border: 1.5px solid #ffcc00;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: 600;
 }/*# sourceMappingURL=index.css.map */

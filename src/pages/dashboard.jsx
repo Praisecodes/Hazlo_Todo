@@ -3,6 +3,7 @@ import SideNav from "../components/sidenav"
 import Header from "../components/header"
 import DashImage from "../assets/dash_image.svg"
 import { Link } from "react-router-dom"
+import { FaPlus } from "react-icons/fa"
 
 export default function Dashboard(){
     return (
@@ -33,7 +34,12 @@ export default function Dashboard(){
                                 <img src={DashImage} alt="" />
                             </div>
                         </div>
-                        <div className="create"></div>
+                        <div className="create">
+                            <i>
+                                <FaPlus />
+                            </i> <br />
+                            <p>Create New Schedule</p>
+                        </div>
                     </div>
                 </div>
             </div>
