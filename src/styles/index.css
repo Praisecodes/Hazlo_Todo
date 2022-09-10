@@ -563,12 +563,12 @@ body {
   background-color: transparent;
 }
 .container .mainContainer .dashboard {
-  padding: 1rem 1.5rem;
+  padding: 1rem 3rem;
 }
 .container .mainContainer .dashboard .welcome {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 .container .mainContainer .dashboard .welcome .welcomeMsg {
@@ -616,7 +616,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem 4rem;
+  padding: 1.5rem 6rem;
   border-radius: 5px;
   cursor: pointer;
   border: 2px dashed #ffcc00;
