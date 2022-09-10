@@ -488,9 +488,12 @@ body {
   background-color: var(--lightModeBg);
 }
 .container .mainContainer .header {
-  padding: 0.8rem 1.3rem;
+  padding: 0.5rem 1.3rem;
   box-shadow: 0 0 5px 1px rgba(68, 68, 68, 0.1333333333);
   background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .container .mainContainer .header form {
   display: flex;
@@ -513,4 +516,37 @@ body {
   border-radius: 3px;
   padding: 5px 10px;
   font-family: Arial;
+}
+.container .mainContainer .header .rightDiv {
+  display: flex;
+  align-items: center;
+}
+.container .mainContainer .header .rightDiv .imageBox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.container .mainContainer .header .rightDiv .imageBox .circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--lightModeBg);
+}
+.container .mainContainer .header .rightDiv .imageBox i {
+  padding: 0;
+}
+.container .mainContainer .header .rightDiv p {
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 0 10px;
+}
+.container .mainContainer .header .rightDiv i {
+  color: var(--fontColor);
+  margin: 0 5px;
+  font-size: 1.4rem;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=index.css.map */

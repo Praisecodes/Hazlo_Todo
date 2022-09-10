@@ -58,9 +58,12 @@
         height: 100%;
         background-color: var(--lightModeBg);
         .header{
-            padding: .8rem 1.3rem;
+            padding: .5rem 1.3rem;
             box-shadow: 0 0 5px 1px #44444422;
             background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             form{
                 display: flex;
                 input{
@@ -81,6 +84,39 @@
                     border-radius: 3px;
                     padding: 5px 10px;
                     font-family: Arial;
+                }
+            }
+            .rightDiv{
+                display: flex;
+                align-items: center;
+                .imageBox{
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    .circle{
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        background-color: var(--lightModeBg);
+                    }
+                    i{
+                        padding: 0;
+                    }
+                }
+                p{
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                    padding: 0 10px;
+                }
+                i{
+                    color: var(--fontColor);
+                    margin: 0 5px;
+                    font-size: 1.4rem;
+                    padding: 5px;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
             }
         }
