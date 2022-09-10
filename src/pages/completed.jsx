@@ -14,6 +14,10 @@ export default function Completed(){
 
             <div className="mainContainer">
                 <Header />
+
+                <div className="mainContent">
+                    
+                </div>
             </div>
         </div>
         </>

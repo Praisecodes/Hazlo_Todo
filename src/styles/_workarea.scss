@@ -2,7 +2,14 @@
     display: flex;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+        width: 5px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: #ffffff44;
+    }
     .sidenav{
         width: 23vw;
         height: 100%;
@@ -106,6 +113,7 @@
                 p{
                     font-weight: 600;
                     font-size: 1.2rem;
+                    color: var(--fontColor);
                     padding: 0 10px;
                 }
                 i{
@@ -117,6 +125,57 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                }
+            }
+        }
+
+        .mainContent{
+            height: calc(100vh - 76px);
+            background-color: transparent;
+        }
+        .dashboard{
+            padding: 2rem 2.5rem;
+            .welcome{
+                display: flex;
+                align-items: center;
+                .welcomeMsg{
+                    background-color: white;
+                    padding: .5rem 1.5rem;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 10px;
+                    .message{
+                        p{
+                            font-family: Arial;
+                            font-size: 1.3rem;
+                            font-weight: 600;
+                            line-height: 1.5;
+                            span{
+                                font-weight: normal;
+                                font-size: 1rem;
+                            }
+                        }
+                        .viewAll{
+                            text-decoration: none;
+                            color: black;
+                            background-color: #ffcc00;
+                            text-align: center;
+                            padding: .7rem 1.5rem;
+                            font-family: Arial;
+                            margin: 1rem 0;
+                            border-radius: 5px;
+                            font-weight: 600;
+                        }
+                    }
+                    .image{
+                        width: 8rem;
+                        height: 8rem;
+                        margin: 0 0 0 2rem;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
                 }
             }
         }

@@ -429,7 +429,14 @@ body {
   display: flex;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.container::-webkit-scrollbar {
+  width: 5px;
+}
+.container::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2666666667);
 }
 .container .sidenav {
   width: 23vw;
@@ -538,6 +545,7 @@ body {
 .container .mainContainer .header .rightDiv p {
   font-weight: 600;
   font-size: 1.2rem;
+  color: var(--fontColor);
   padding: 0 10px;
 }
 .container .mainContainer .header .rightDiv i {
@@ -549,4 +557,52 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.container .mainContainer .mainContent {
+  height: calc(100vh - 76px);
+  background-color: transparent;
+}
+.container .mainContainer .dashboard {
+  padding: 2rem 2.5rem;
+}
+.container .mainContainer .dashboard .welcome {
+  display: flex;
+  align-items: center;
+}
+.container .mainContainer .dashboard .welcome .welcomeMsg {
+  background-color: white;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+.container .mainContainer .dashboard .welcome .welcomeMsg .message p {
+  font-family: Arial;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.container .mainContainer .dashboard .welcome .welcomeMsg .message p span {
+  font-weight: normal;
+  font-size: 1rem;
+}
+.container .mainContainer .dashboard .welcome .welcomeMsg .message .viewAll {
+  text-decoration: none;
+  color: black;
+  background-color: #ffcc00;
+  text-align: center;
+  padding: 0.7rem 1.5rem;
+  font-family: Arial;
+  margin: 1rem 0;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.container .mainContainer .dashboard .welcome .welcomeMsg .image {
+  width: 8rem;
+  height: 8rem;
+  margin: 0 0 0 2rem;
+}
+.container .mainContainer .dashboard .welcome .welcomeMsg .image img {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=index.css.map */

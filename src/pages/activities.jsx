@@ -14,6 +14,10 @@ export default function Activities(){
 
             <div className="mainContainer">
                 <Header />
+
+                <div className="mainContent">
+                    
+                </div>
             </div>
         </div>
         </>
