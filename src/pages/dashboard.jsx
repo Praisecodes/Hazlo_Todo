@@ -41,6 +41,30 @@ export default function Dashboard(){
                             <p>Create New Schedule</p>
                         </div>
                     </div>
+
+                    <div className="counts">
+                        <div className="cards">
+
+                        </div>
+                        <div className="cards">
+                            
+                        </div>
+                        <div className="cards">
+                            
+                        </div>
+                        <div className="cards">
+                            
+                        </div>
+                        <div className="cards">
+                            
+                        </div>
+                        <div className="cards">
+                            
+                        </div>
+                        <div className="cards">
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
