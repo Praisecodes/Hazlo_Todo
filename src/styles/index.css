@@ -5,6 +5,13 @@
   --sideNavColor: #242C39;
   --lightModeBg: #F4F5FF;
   --hoverInDark: #424b58aa;
+  --totalBlue: #6492ED;
+  --yellow: #ffcc00;
+  --completePink: #C3377D;
+  --dashGray: #666666;
+  --dashGreen: #1BC100;
+  --dashPurple: #7932D4;
+  --darkerBlue: #0093C1;
 }
 
 * {
@@ -16,6 +23,34 @@
 .selected {
   border-left: 4px solid white;
   background-color: var(--hoverInDark);
+}
+
+.darkerBlue {
+  background-color: var(--darkerBlue);
+}
+
+.dashPurple {
+  background-color: var(--dashPurple);
+}
+
+.dashGreen {
+  background-color: var(--dashGreen);
+}
+
+.dashGray {
+  background-color: var(--dashGray);
+}
+
+.completePink {
+  background-color: var(--completePink);
+}
+
+.blue {
+  background-color: var(--totalBlue);
+}
+
+.yellow {
+  background-color: var(--yellow);
 }
 
 body {
@@ -493,6 +528,15 @@ body {
   width: 77vw;
   height: 100%;
   background-color: var(--lightModeBg);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.container .mainContainer::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(85, 85, 85, 0.2);
+}
+.container .mainContainer::-webkit-scrollbar-thumb {
+  background-color: var(--dashGray);
 }
 .container .mainContainer .header {
   padding: 0.5rem 1.3rem;
@@ -592,7 +636,7 @@ body {
 .container .mainContainer .dashboard .welcome .welcomeMsg .message .viewAll {
   text-decoration: none;
   color: black;
-  background-color: #ffcc00;
+  background-color: var(--yellow);
   text-align: center;
   padding: 0.7rem 1.5rem;
   font-family: Arial;
@@ -638,7 +682,30 @@ body {
 }
 .container .mainContainer .dashboard .counts .cards {
   background-color: white;
-  padding: 1rem;
-  width: 16.8rem;
+  padding: 2rem 1rem;
+  width: 16.6rem;
   margin: 0.5rem;
+  display: flex;
+  font-family: Arial;
+  align-items: center;
+  border-radius: 5px;
+}
+.container .mainContainer .dashboard .counts .cards .imageDiv {
+  padding: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .mainContainer .dashboard .counts .cards .text {
+  padding: 0 1rem;
+}
+.container .mainContainer .dashboard .counts .cards .text h1, .container .mainContainer .dashboard .counts .cards .text p {
+  padding: 0;
+  margin: 0;
+}
+.container .mainContainer .dashboard .counts .cards .text p {
+  font-weight: 600;
 }/*# sourceMappingURL=index.css.map */

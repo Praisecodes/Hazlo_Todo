@@ -5,6 +5,13 @@
     --sideNavColor: #242C39;
     --lightModeBg: #F4F5FF;
     --hoverInDark: #424b58aa;
+    --totalBlue: #6492ED;
+    --yellow: #ffcc00;
+    --completePink: #C3377D;
+    --dashGray: #666666;
+    --dashGreen: #1BC100;
+    --dashPurple: #7932D4;
+    --darkerBlue: #0093C1;
 }
 
 *{
@@ -16,6 +23,28 @@
 .selected{
     border-left: 4px solid white;
     background-color: var(--hoverInDark);
+}
+
+.darkerBlue{
+    background-color: var(--darkerBlue);
+}
+.dashPurple{
+    background-color: var(--dashPurple);
+}
+.dashGreen{
+    background-color: var(--dashGreen);
+}
+.dashGray{
+    background-color: var(--dashGray);
+}
+.completePink{
+    background-color: var(--completePink);
+}
+.blue{
+    background-color: var(--totalBlue);
+}
+.yellow{
+    background-color: var(--yellow);
 }
 
 body{
