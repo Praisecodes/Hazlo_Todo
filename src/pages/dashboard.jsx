@@ -11,8 +11,17 @@ import TrashedImage from "../assets/trashed_image.png"
 import StarredImage from "../assets/starred_image.png"
 import { Link } from "react-router-dom"
 import { FaPlus } from "react-icons/fa"
+import { useState } from "react"
 
 export default function Dashboard(){
+    const [TotalActivities, SetTotalActivities] = useState(0);
+    const [DueActivities, SetDueActivities] = useState(0);
+    const [CompletedActivities, SetCompletedActivities] = useState(0);
+    const [ArchivedActivities, SetArchivedActivities] = useState(0);
+    const [UnfinishedActivities, SetUnfinishedActivities] = useState(0);
+    const [TrashedActivities, SetTrashedActivities] = useState(0);
+    const [StarredActivities, SetStarredActivities] = useState(0);
+
     return (
         <>
         <Helmet>
@@ -56,7 +65,7 @@ export default function Dashboard(){
                             </div>
                             <div className="text">
                                 <h1>
-                                    12
+                                    {TotalActivities}
                                 </h1>
                                 <p>Total Activities</p>
                             </div>
@@ -67,7 +76,7 @@ export default function Dashboard(){
                             </div>
                             <div className="text">
                                 <h1>
-                                    0
+                                    {DueActivities}
                                 </h1>
                                 <p>Activities Due Today</p>
                             </div>
@@ -78,7 +87,7 @@ export default function Dashboard(){
                             </div>
                             <div className="text">
                                 <h1>
-                                    4
+                                    {CompletedActivities}
                                 </h1>
                                 <p>Activities Completed</p>
                             </div>
@@ -89,7 +98,7 @@ export default function Dashboard(){
                             </div>
                             <div className="text">
                                 <h1>
-                                    10
+                                    {ArchivedActivities}
                                 </h1>
                                 <p>Archived Activities</p>
                             </div>
@@ -100,7 +109,7 @@ export default function Dashboard(){
                             </div>
                             <div className="text">
                                 <h1>
-                                    2
+                                    {UnfinishedActivities}
                                 </h1>
                                 <p>Unfinished Activities</p>
                             </div>
@@ -111,7 +120,7 @@ export default function Dashboard(){
                             </div>
                             <div className="text">
                                 <h1>
-                                    1
+                                    {TrashedActivities}
                                 </h1>
                                 <p>Trashed Activities</p>
                             </div>
@@ -122,7 +131,7 @@ export default function Dashboard(){
                             </div>
                             <div className="text">
                                 <h1>
-                                    6
+                                    {StarredActivities}
                                 </h1>
                                 <p>Starred Activities</p>
                             </div>
