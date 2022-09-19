@@ -528,15 +528,6 @@ body {
   width: 77vw;
   height: 100%;
   background-color: var(--lightModeBg);
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-.container .mainContainer::-webkit-scrollbar {
-  width: 5px;
-  background-color: rgba(85, 85, 85, 0.2);
-}
-.container .mainContainer::-webkit-scrollbar-thumb {
-  background-color: var(--dashGray);
 }
 .container .mainContainer .header {
   padding: 0.5rem 1.3rem;
@@ -608,6 +599,15 @@ body {
 }
 .container .mainContainer .dashboard {
   padding: 1rem 3rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.container .mainContainer .dashboard::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(85, 85, 85, 0.2);
+}
+.container .mainContainer .dashboard::-webkit-scrollbar-thumb {
+  background-color: var(--dashGray);
 }
 .container .mainContainer .dashboard .welcome {
   display: flex;
@@ -698,6 +698,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 3px;
 }
 .container .mainContainer .dashboard .counts .cards .text {
   padding: 0 1rem;
