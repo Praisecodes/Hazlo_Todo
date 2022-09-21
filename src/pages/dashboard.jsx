@@ -41,7 +41,10 @@ export default function Dashboard(){
                             <div className="message">
                                 <p>
                                     Hello {username}, welcome back... <br />
-                                    <span>You have no pending task</span>
+                                    <span>
+                                        {(UnfinishedActivities == 0)?"You have no unfinished tasks" : 
+                                        `Unfinished Task(s): ${UnfinishedActivities}`}
+                                    </span>
                                 </p> <br />
                                 <Link to="/activities" className="viewAll">
                                     View All
