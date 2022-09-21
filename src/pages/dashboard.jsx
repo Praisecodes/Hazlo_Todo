@@ -21,6 +21,7 @@ export default function Dashboard(){
     const [UnfinishedActivities, SetUnfinishedActivities] = useState(0);
     const [TrashedActivities, SetTrashedActivities] = useState(0);
     const [StarredActivities, SetStarredActivities] = useState(0);
+    const [username, setUsername] = useState(localStorage.getItem('username'));
 
     return (
         <>
@@ -39,7 +40,7 @@ export default function Dashboard(){
                         <div className="welcomeMsg">
                             <div className="message">
                                 <p>
-                                    Hello Christian, welcome back... <br />
+                                    Hello {username}, welcome back... <br />
                                     <span>You have no pending task</span>
                                 </p> <br />
                                 <Link to="/activities" className="viewAll">

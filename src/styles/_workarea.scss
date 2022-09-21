@@ -152,11 +152,13 @@
                 flex-wrap: wrap;
                 .welcomeMsg{
                     background-color: white;
-                    padding: .2rem 1rem;
+                    max-width: 30rem;
+                    padding: .5rem 1rem;
                     display: flex;
                     align-items: center;
                     border-radius: 5px;
                     margin: .8rem 0;
+                    overflow: hidden;
                     .message{
                         p{
                             font-family: Arial;

@@ -1,6 +1,8 @@
 import { FaAngleDown, FaBell, FaMoon } from "react-icons/fa"
+import { useState, useTransition } from "react"
 
 export default function Header(){
+    const [username, setUsername] = useState(localStorage.getItem('username'));
     return (
         <>
         <div className="header">
@@ -15,7 +17,7 @@ export default function Header(){
                 <i>
                     <FaBell />
                 </i>
-                <p>Christian</p>
+                <p>{username}</p>
                 <div className="imageBox">
                     <div className="circle">
 

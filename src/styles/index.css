@@ -617,11 +617,13 @@ body {
 }
 .container .mainContainer .dashboard .welcome .welcomeMsg {
   background-color: white;
-  padding: 0.2rem 1rem;
+  max-width: 30rem;
+  padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
   border-radius: 5px;
   margin: 0.8rem 0;
+  overflow: hidden;
 }
 .container .mainContainer .dashboard .welcome .welcomeMsg .message p {
   font-family: Arial;
