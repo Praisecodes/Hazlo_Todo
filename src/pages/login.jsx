@@ -1,7 +1,7 @@
 import {Helmet} from "react-helmet"
 import Logo from "../assets/hazlo-logo.png"
 import {useNavigate} from "react-router-dom"
-import {useState, useEffect} from "react"
+import {useState} from "react"
 
 function Login(){
     let nav = useNavigate();
