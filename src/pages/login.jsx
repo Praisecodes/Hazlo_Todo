@@ -20,7 +20,6 @@ function Login(){
     function vaidateLogin(event){
         event.preventDefault();
         setLoggingIn(true);
-        //console.log(username);
         fetch("https://hazloapi.herokuapp.com/login.php", {
             method: "POST",
             headers: {
