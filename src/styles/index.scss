@@ -22,7 +22,7 @@
 
 .openByHeight{
     height: fit-content;
-    padding: .5rem 0;
+    // padding: .5rem 0;
     box-shadow: 0 2px 1px 1px #edededaa;
 }
 .closeByHeight{
@@ -334,3 +334,4 @@ body{
 @import './workarea';
 @import './homeresponsive';
 @import './formsresponsive';
+@import './workarearesponsive';

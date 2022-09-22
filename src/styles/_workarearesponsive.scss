@@ -1,0 +1,25 @@
+@media screen and (max-width: 1025px) {
+    .container{
+        .sidenav{
+            display: none;
+        }
+        .mainContainer{
+            width: 100vw;
+        }
+    }
+}
+
+@media screen and (max-width: 869px) {
+    .container{
+        .mainContainer{
+            .header{
+                img{
+                    display: block;
+                }
+                form{
+                    display: none;
+                }
+            }
+        }
+    }
+}

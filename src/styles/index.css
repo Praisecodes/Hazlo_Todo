@@ -24,7 +24,6 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 0.5rem 0;
   box-shadow: 0 2px 1px 1px rgba(237, 237, 237, 0.6666666667);
 }
 
@@ -589,6 +588,11 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.container .mainContainer .header img {
+  width: 3rem;
+  height: 3rem;
+  display: none;
+}
 .container .mainContainer .header form {
   display: flex;
 }
@@ -637,18 +641,36 @@ body {
   right: 0;
   background-color: white;
   width: 15rem;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   transition: 0.2s ease-in;
+  max-height: 25rem;
+}
+.container .mainContainer .header .rightDiv .imageBox .dropdown::-webkit-scrollbar {
+  display: block;
+  width: 2px;
+  background-color: rgba(51, 51, 51, 0.1333333333);
+}
+.container .mainContainer .header .rightDiv .imageBox .dropdown::-webkit-scrollbar-thumb {
+  background-color: rgba(68, 68, 68, 0.1333333333);
 }
 .container .mainContainer .header .rightDiv .imageBox .dropdown p {
+  font-weight: lighter;
+}
+.container .mainContainer .header .rightDiv .imageBox .dropdown p i {
+  font-size: 1.2rem;
+}
+.container .mainContainer .header .rightDiv .imageBox .dropdown .options {
   font-size: 1.2rem;
   padding: 1rem 2rem;
   transition: 0.2s ease-in;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
+  color: var(--fontColor);
 }
-.container .mainContainer .header .rightDiv .imageBox .dropdown p:hover {
+.container .mainContainer .header .rightDiv .imageBox .dropdown .options:hover {
   background-color: var(--lightModeBg);
 }
 .container .mainContainer .header .rightDiv p {
@@ -874,5 +896,21 @@ body {
   }
   .signupContainer .container .left form {
     width: 90%;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .container .sidenav {
+    display: none;
+  }
+  .container .mainContainer {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 869px) {
+  .container .mainContainer .header img {
+    display: block;
+  }
+  .container .mainContainer .header form {
+    display: none;
   }
 }/*# sourceMappingURL=index.css.map */

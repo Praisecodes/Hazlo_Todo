@@ -73,6 +73,11 @@
             justify-content: space-between;
             align-items: center;
             //height: 60px;
+            img{
+                width: 3rem;
+                height: 3rem;
+                display: none;
+            }
             form{
                 display: flex;
                 input{
@@ -119,15 +124,33 @@
                         right: 0;
                         background-color: white;
                         width: 15rem;
-                        overflow: hidden;
+                        overflow-x: hidden;
+                        overflow-y: scroll;
                         transition: .2s ease-in;
+                        max-height: 25rem;
+                        &::-webkit-scrollbar{
+                            display: block;
+                            width: 2px;
+                            background-color: #33333322;
+                        }
+                        &::-webkit-scrollbar-thumb{
+                            background-color: #44444422;
+                        }
                         p{
+                            font-weight: lighter;
+                            i{
+                                font-size: 1.2rem;
+                            }
+                        }
+                        .options{
                             font-size: 1.2rem;
                             padding: 1rem 2rem;
                             transition: .2s ease-in;
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
+                            text-decoration: none;
+                            color: var(--fontColor);
                             &:hover{
                                 background-color: var(--lightModeBg);
                             }
