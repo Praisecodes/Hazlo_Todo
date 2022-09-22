@@ -4,7 +4,7 @@ import {useNavigate} from "react-router-dom"
 import {useState} from "react"
 import { useEffect } from "react";
 import "react-toastify/dist/ReactToastify.css";
-import { toast, ToastContainer, Zoom } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 
 function Login(){
     let nav = useNavigate();
@@ -12,7 +12,6 @@ function Login(){
     const [password, setPassword] = useState("");
     const [token, setToken] = useState(localStorage.getItem('token'));
     const [loggingIn, setLoggingIn] = useState(false);
-    const [messageShown, setMessageShown] = useState("");
     
     useEffect(()=>{
         if(token != null){
@@ -74,7 +73,14 @@ function Login(){
                 nav("/dashboard");
             }
         })
-        .catch((err)=>{console.log(err)});
+        .catch((err)=>{
+            console.log(err);
+            setLoggingIn(false);
+            toast.error("An Error Has Occured!", {
+                draggable: false,
+                position: toast.POSITION.TOP_CENTER
+            });
+        });
     }
 
     function toSignUp(){

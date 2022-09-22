@@ -135,6 +135,44 @@ body{
             border: 1px solid var(--colorMain);
         }
     }
+    .navBtn{
+        display: none;
+        padding: .3rem;
+        font-size: 1.5rem;
+        position: relative;
+        .dropdown{
+            position: absolute;
+            width: 15rem;
+            top: 100%;
+            right: 0;
+            background-color: white;
+            overflow: hidden;
+            transition: .2s ease-in-out;
+            p{
+                padding: 1rem .8rem;
+                font-size: 1.2rem;
+                &:hover{
+                    background-color: var(--lightModeBg);
+                }
+            }
+            button{
+                margin: 0 .8rem;
+                padding: 7px 10px;
+                border: 0;
+                border-radius: 3px;
+                font-size: 17px;
+            }
+            .login{
+                color: white;
+                background-color: var(--colorMain);
+                border: 1px solid var(--colorMain);
+            }
+            .signup{
+                background-color: transparent;
+                border: 1px solid var(--colorMain);
+            }
+        }
+    }
 }
 
 .introSection{
@@ -153,6 +191,7 @@ body{
         h1{
             font-size: 3.5rem;
             padding: 1.5rem 0;
+            font-family: Arial;
         }
         p{
             font-size: 16px;
@@ -235,6 +274,7 @@ body{
         width: 55vw;
         form{
             width: 40%;
+            max-width: 90%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -284,7 +324,7 @@ body{
         padding: .5rem 0;
         margin: 0 auto;
         color: white;
-        font-family: tahoma;
+        font-family: Arial;
         font-size: 14px;
     }
 }
@@ -292,3 +332,4 @@ body{
 @import './login';
 @import './signup';
 @import './workarea';
+@import './homeresponsive';

@@ -1,0 +1,79 @@
+@media screen and (max-width: 792px) {
+    .homeTopper{
+        ul, .actionButtons{
+            display: none;
+        }
+        .navBtn{
+            display: block;
+        }
+    }
+    .introSection{
+        .introContent{
+            height: 85vh;
+            padding: 3rem 0;
+        }
+        .right{
+            display: none;
+        }
+        .left{
+            width: 100vw;
+            padding: 0 3rem;
+        }
+    }
+    .aboutSection{
+        .aboutContent{
+            height: fit-content;
+            padding: 8rem 0;
+        }
+        .left{
+            display: none;
+        }
+        .right{
+            width: 100vw;
+            padding: 0 3rem;
+            h2{
+                line-height: 0px;
+            }
+        }
+    }
+    .supportSection{
+        justify-content: center;
+        align-items: center;
+        .supportContent{
+            height: fit-content;
+            // padding: 8rem 0;
+        }
+        .right{
+            display: none;
+        }
+        .left{
+            width: fit-content;
+            // padding: 0 3rem;
+            form{
+                width: 17rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .homeTopper{
+        padding: .5rem;
+    }
+    .introSection{
+        .left{
+            padding: 0 1rem;
+            h1{
+                font-size: 2.5rem;
+            }
+            p{
+                font-size: .9rem;
+            }
+        }
+    }
+    .aboutSection{
+        .right{
+            padding: 0 1rem;
+        }
+    }
+}
