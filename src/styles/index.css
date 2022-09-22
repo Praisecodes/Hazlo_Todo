@@ -858,4 +858,18 @@ body {
   .aboutSection .right {
     padding: 0 1rem;
   }
+}
+@media screen and (max-width: 630px) {
+  .loginContainer .container .right {
+    width: 100%;
+  }
+  .loginContainer .container .left {
+    display: none;
+  }
+  .signupContainer .container .right {
+    display: none;
+  }
+  .signupContainer .container .left {
+    width: 100%;
+  }
 }/*# sourceMappingURL=index.css.map */

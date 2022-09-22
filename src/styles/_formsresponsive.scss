@@ -1,0 +1,22 @@
+@media screen and (max-width: 630px) {
+    .loginContainer{
+        .container{
+            .right{
+                width: 100%;
+            }
+            .left{
+                display: none;
+            }
+        }
+    }
+    .signupContainer{
+        .container{
+            .right{
+                display: none;
+            }
+            .left{
+                width: 100%;
+            }
+        }
+    }
+}
