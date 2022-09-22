@@ -1,4 +1,4 @@
-import { FaAngleDown, FaArrowLeft, FaArrowRight, FaBell, FaMoon } from "react-icons/fa"
+import { FaAngleDown, FaArrowRight, FaBell, FaMoon } from "react-icons/fa"
 import { useState, useTransition } from "react"
 import { useNavigate } from "react-router-dom";
 
@@ -7,8 +7,8 @@ export default function Header(){
     const [dropDown, setDropDown] = useState(false);
     const nav = useNavigate();
     function handleLogout(){
-        localStorage.removeItem('username'); 
-        localStorage.removeItem('token'); 
+        localStorage.removeItem('username');
+        localStorage.removeItem('token');
         nav('/login');
     }
     return (

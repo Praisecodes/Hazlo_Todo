@@ -37,6 +37,7 @@ function Login(){
                 case 200:
                     localStorage.setItem('username', username);
                     return res.json();
+                    setLoggingIn(false);
                     break;
                 case 403:
                     console.log("Unauthorized");
