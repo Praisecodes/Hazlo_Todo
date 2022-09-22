@@ -20,7 +20,7 @@ function Login(){
     function vaidateLogin(event){
         event.preventDefault();
         setLoggingIn(true);
-        
+        //console.log(username);
         fetch("https://hazloapi.herokuapp.com/login.php", {
             method: "POST",
             headers: {
@@ -36,8 +36,8 @@ function Login(){
             switch(status){
                 case 200:
                     localStorage.setItem('username', username);
-                    return res.text();
                     setLoggingIn(false);
+                    return res.json();
                     break;
                 case 403:
                     console.log("Unauthorized");
@@ -54,6 +54,7 @@ function Login(){
                 default:
                     console.log("No Input");
                     setLoggingIn(false);
+                    break;
             }
         })
         .then((data)=>{
