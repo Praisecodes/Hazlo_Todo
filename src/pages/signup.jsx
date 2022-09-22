@@ -24,7 +24,7 @@ function Signup(){
             if(fullname.match(validName)){
                 if(username.match(validUsername)){
                     if(confirmPassword === password){
-                        fetch("http://localhost/hazloapi/signup.php", {
+                        fetch("https://hazloapi.herokuapp.com/signup.php", {
                             method: "POST",
                             headers: {
                                 "Content-Type": "application/json"
@@ -44,12 +44,15 @@ function Signup(){
                                     break;
                                 case 201:
                                     console.log("success!");
+                                    setSigningUp(false);
                                     break;
                                 case 500:
                                     console.log(res.statusText);
+                                    setSigningUp(false);
                                     break;
                                 default:
                                     console.log("nada");
+                                    setSigningUp(false);
                             }
                         })
                     }

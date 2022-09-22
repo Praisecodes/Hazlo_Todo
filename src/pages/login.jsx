@@ -7,12 +7,11 @@ function Login(){
     let nav = useNavigate();
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [jwt, setJwt] = useState("");
 
     function vaidateLogin(event){
         event.preventDefault();
         
-        fetch("http://localhost/hazloapi/login.php", {
+        fetch("https://hazloapi.herokuapp.com/login.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
