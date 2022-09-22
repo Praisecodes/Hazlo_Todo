@@ -36,7 +36,7 @@ function Login(){
             switch(status){
                 case 200:
                     localStorage.setItem('username', username);
-                    return res.json();
+                    return res.text();
                     setLoggingIn(false);
                     break;
                 case 403:
