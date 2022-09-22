@@ -20,6 +20,15 @@
     color: light;
 }
 
+.openByHeight{
+    height: fit-content;
+    padding: .5rem 0;
+    box-shadow: 0 2px 1px 1px #edededaa;
+}
+.closeByHeight{
+    height: 0;
+}
+
 .selected{
     border-left: 4px solid white;
     background-color: var(--hoverInDark);

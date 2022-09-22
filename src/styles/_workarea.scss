@@ -72,6 +72,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            //height: 60px;
             form{
                 display: flex;
                 input{
@@ -97,10 +98,12 @@
             .rightDiv{
                 display: flex;
                 align-items: center;
+                height: 100%;
                 .imageBox{
                     display: flex;
                     align-items: center;
                     cursor: pointer;
+                    position: relative;
                     .circle{
                         width: 60px;
                         height: 60px;
@@ -109,6 +112,26 @@
                     }
                     i{
                         padding: 0;
+                    }
+                    .dropdown{
+                        position: absolute;
+                        top: 100%;
+                        right: 0;
+                        background-color: white;
+                        width: 15rem;
+                        overflow: hidden;
+                        transition: .2s ease-in;
+                        p{
+                            font-size: 1.2rem;
+                            padding: 1rem 2rem;
+                            transition: .2s ease-in;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            &:hover{
+                                background-color: var(--lightModeBg);
+                            }
+                        }
                     }
                 }
                 p{

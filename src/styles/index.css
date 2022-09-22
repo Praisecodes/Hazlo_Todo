@@ -20,6 +20,18 @@
   color: light;
 }
 
+.openByHeight {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 1px 1px rgba(237, 237, 237, 0.6666666667);
+}
+
+.closeByHeight {
+  height: 0;
+}
+
 .selected {
   border-left: 4px solid white;
   background-color: var(--hoverInDark);
@@ -562,11 +574,13 @@ body {
 .container .mainContainer .header .rightDiv {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 .container .mainContainer .header .rightDiv .imageBox {
   display: flex;
   align-items: center;
   cursor: pointer;
+  position: relative;
 }
 .container .mainContainer .header .rightDiv .imageBox .circle {
   width: 60px;
@@ -576,6 +590,26 @@ body {
 }
 .container .mainContainer .header .rightDiv .imageBox i {
   padding: 0;
+}
+.container .mainContainer .header .rightDiv .imageBox .dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: 15rem;
+  overflow: hidden;
+  transition: 0.2s ease-in;
+}
+.container .mainContainer .header .rightDiv .imageBox .dropdown p {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  transition: 0.2s ease-in;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .mainContainer .header .rightDiv .imageBox .dropdown p:hover {
+  background-color: var(--lightModeBg);
 }
 .container .mainContainer .header .rightDiv p {
   font-weight: 600;
