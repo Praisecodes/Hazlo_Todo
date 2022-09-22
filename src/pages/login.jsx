@@ -2,14 +2,24 @@ import {Helmet} from "react-helmet"
 import Logo from "../assets/hazlo-logo.png"
 import {useNavigate} from "react-router-dom"
 import {useState} from "react"
+import { useEffect } from "react";
 
 function Login(){
     let nav = useNavigate();
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [token, setToken] = useState(localStorage.getItem('token'));
+    const [loggingIn, setLoggingIn] = useState(false);
+    
+    useEffect(()=>{
+        if(token != null){
+            nav('/dashboard');
+        }
+    }, [token]);
 
     function vaidateLogin(event){
         event.preventDefault();
+        setLoggingIn(true);
         
         fetch("https://hazloapi.herokuapp.com/login.php", {
             method: "POST",
@@ -30,15 +40,19 @@ function Login(){
                     break;
                 case 403:
                     console.log("Unauthorized");
+                    setLoggingIn(false);
                     break;
                 case 404:
                     console.log("No User Found");
+                    setLoggingIn(false);
                     break;
                 case 500:
                     console.log(res.statusText);
+                    setLoggingIn(false);
                     break;
                 default:
                     console.log("No Input");
+                    setLoggingIn(false);
             }
         })
         .then((data)=>{
@@ -68,9 +82,11 @@ function Login(){
                 <div className="right">
                     <h2>Login</h2>
                     <form onSubmit={(e)=>{vaidateLogin(e)}}>
-                        <input type="text" placeholder="Enter Your Email" onChange={(e)=>{setUsername(e.target.value)}} />
+                        <input type="text" placeholder="Enter Your Username" onChange={(e)=>{setUsername(e.target.value)}} />
                         <input type="password" placeholder="Enter Your Password" onChange={(e)=>{setPassword(e.target.value)}} />
-                        <button type="submit">Login</button>
+                        <button type="submit">
+                            {(loggingIn)?'Please Wait...':'Login'}
+                        </button>
                         <p>Don't have an account? <span onClick={toSignUp}>Sign Up</span></p>
                     </form>
                 </div>

@@ -11,7 +11,8 @@ import TrashedImage from "../assets/trashed_image.png"
 import StarredImage from "../assets/starred_image.png"
 import { Link } from "react-router-dom"
 import { FaPlus } from "react-icons/fa"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 export default function Dashboard(){
     const [TotalActivities, SetTotalActivities] = useState(0);
@@ -22,6 +23,15 @@ export default function Dashboard(){
     const [TrashedActivities, SetTrashedActivities] = useState(0);
     const [StarredActivities, SetStarredActivities] = useState(0);
     const [username, setUsername] = useState(localStorage.getItem('username'));
+    const [token, setToken] = useState(localStorage.getItem('token'));
+
+    const nav = useNavigate();
+
+    useEffect(()=>{
+        if(token == null || username == null){
+            nav("/login");
+        }
+    })
 
     return (
         <>
