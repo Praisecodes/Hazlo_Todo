@@ -2,6 +2,8 @@ import {Helmet} from "react-helmet"
 import Logo from "../assets/hazlo-logo.png"
 import {useNavigate} from "react-router-dom"
 import {useState} from "react";
+import "react-toastify/dist/ReactToastify.css";
+import { toast, ToastContainer } from "react-toastify";
 
 function Signup(){
     let navigate = useNavigate();
@@ -14,7 +16,6 @@ function Signup(){
 
     function signUpUser(event){
         event.preventDefault();
-        setSigningUp(true);
 
         const validEmail = /[A-Z0-9a-z\W]{3,}[@][a-z]{2,}[\.][a-z]{2,}/;
         const validName = /[A-Za-z\-\'\. ]{1,}/;
@@ -24,11 +25,12 @@ function Signup(){
             if(fullname.match(validName)){
                 if(username.match(validUsername)){
                     if(confirmPassword === password){
+                        setSigningUp(true);
                         fetch("https://hazloapi.herokuapp.com/signup.php", {
                             method: "POST",
                             headers: {
                                 "Content-Type": "application/json"
-                            }, 
+                            },
                             body: JSON.stringify({
                                 'fullname': fullname,
                                 'username': username,
@@ -43,30 +45,47 @@ function Signup(){
                                     navigate('/login');
                                     break;
                                 case 201:
-                                    console.log("success!");
                                     setSigningUp(false);
+                                    toast.update("No Email Sent, Just Login",{
+                                        position: toast.POSITION.TOP_CENTER,
+                                        draggable: false
+                                    })
                                     break;
                                 case 500:
                                     console.log(res.statusText);
                                     setSigningUp(false);
                                     break;
                                 default:
-                                    console.log("nada");
+                                    toast.error("Error!!",{
+                                        draggable: false,
+                                        position: toast.POSITION.TOP_RIGHT
+                                    });
                                     setSigningUp(false);
                             }
                         })
                     }
+                    else{
+                        toast.error("Passwords Don't Match", {
+                            draggable: false
+                        })
+                    }
                 }
                 else{
-                    console.log("Username mismatch");
+                    toast.error("Username Mismatch", {
+                        draggable: false
+                    })
                 }
             }
             else{
-                console.log("Fullname mismatch");
+                toast.error("Fullname Mismatch", {
+                    draggable: false
+                })
             }
         }
         else{
-            console.log("Can't continue");
+            toast.error("Invalid Email", {
+                draggable: false
+            })
         }
     }
 
@@ -79,6 +98,7 @@ function Signup(){
             <title>Hazlo Todo | Signup</title>
         </Helmet>
         <div className="signupContainer">
+            <ToastContainer />
             <div className="container">
                 <div className="left">
                     <h2>Sign Up</h2>

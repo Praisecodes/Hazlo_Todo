@@ -3,6 +3,8 @@ import Logo from "../assets/hazlo-logo.png"
 import {useNavigate} from "react-router-dom"
 import {useState} from "react"
 import { useEffect } from "react";
+import "react-toastify/dist/ReactToastify.css";
+import { toast, ToastContainer, Zoom } from "react-toastify";
 
 function Login(){
     let nav = useNavigate();
@@ -10,6 +12,7 @@ function Login(){
     const [password, setPassword] = useState("");
     const [token, setToken] = useState(localStorage.getItem('token'));
     const [loggingIn, setLoggingIn] = useState(false);
+    const [messageShown, setMessageShown] = useState("");
     
     useEffect(()=>{
         if(token != null){
@@ -39,16 +42,25 @@ function Login(){
                     return res.json();
                     break;
                 case 403:
-                    console.log("Unauthorized");
                     setLoggingIn(false);
+                    toast.error("Invalid Login Details",{
+                        draggable: false,
+                        position: toast.POSITION.TOP_RIGHT,
+                    });
                     break;
                 case 404:
-                    console.log("No User Found");
                     setLoggingIn(false);
+                    toast.warn("No Such User",{
+                        draggable: false,
+                        position: toast.POSITION.TOP_RIGHT
+                    });
                     break;
                 case 500:
-                    console.log(res.statusText);
                     setLoggingIn(false);
+                    toast.error("Internal Server Error!",{
+                        draggable: false,
+                        position: toast.POSITION.TOP_RIGHT
+                    });
                     break;
                 default:
                     console.log("No Input");
@@ -75,6 +87,7 @@ function Login(){
             <title>Hazlo Todo | Login</title>
         </Helmet>
         <div className="loginContainer">
+            <ToastContainer />
             <div className="container">
                 <div className="left">
                     <img src={Logo} alt="" />
