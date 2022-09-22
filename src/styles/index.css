@@ -872,4 +872,7 @@ body {
   .signupContainer .container .left {
     width: 100%;
   }
+  .signupContainer .container .left form {
+    width: 90%;
+  }
 }/*# sourceMappingURL=index.css.map */
