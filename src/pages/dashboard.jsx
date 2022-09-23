@@ -50,7 +50,7 @@ export default function Dashboard(){
                         <div className="welcomeMsg">
                             <div className="message">
                                 <p>
-                                    Hello {username}, welcome back... <br />
+                                    Hello {username}! <br />
                                     <span>
                                         {(UnfinishedActivities == 0)?"You have no unfinished tasks" : 
                                         `Unfinished Task(s): ${UnfinishedActivities}`}
