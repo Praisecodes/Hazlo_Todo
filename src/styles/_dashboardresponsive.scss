@@ -1,0 +1,45 @@
+@media screen and (max-width: 980px) {
+    .container{
+        .mainContainer{
+            .dashboard{
+                .welcome{
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .welcomeMsg{
+                        .message{
+                            p{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 490px){
+    .container{
+        .mainContainer{
+            .dashboard{
+                padding: 1rem;
+                .welcome{
+                    .welcomeMsg{
+                        width: 90%;
+                        padding: 1rem 1rem;
+                        .image{
+                            display: none;
+                        }
+                    }
+                    .create{
+                        padding: 1rem 5rem;
+                        p{
+                            font-size: .9rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

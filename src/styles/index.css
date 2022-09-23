@@ -913,4 +913,37 @@ body {
   .container .mainContainer .header form {
     display: none;
   }
+}
+@media screen and (max-width: 490px) {
+  .container .mainContainer .header {
+    padding: 0.5rem;
+  }
+}
+@media screen and (max-width: 980px) {
+  .container .mainContainer .dashboard .welcome {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .mainContainer .dashboard .welcome .welcomeMsg .message p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 490px) {
+  .container .mainContainer .dashboard {
+    padding: 1rem;
+  }
+  .container .mainContainer .dashboard .welcome .welcomeMsg {
+    width: 90%;
+    padding: 1rem 1rem;
+  }
+  .container .mainContainer .dashboard .welcome .welcomeMsg .image {
+    display: none;
+  }
+  .container .mainContainer .dashboard .welcome .create {
+    padding: 1rem 5rem;
+  }
+  .container .mainContainer .dashboard .welcome .create p {
+    font-size: 0.9rem;
+  }
 }/*# sourceMappingURL=index.css.map */

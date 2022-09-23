@@ -23,3 +23,13 @@
         }
     }
 }
+
+@media screen and (max-width: 490px) {
+    .container{
+        .mainContainer{
+            .header{
+                padding: .5rem;
+            }
+        }
+    }
+}
