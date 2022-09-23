@@ -655,7 +655,7 @@ body {
   background-color: rgba(68, 68, 68, 0.1333333333);
 }
 .container .mainContainer .header .rightDiv .imageBox .dropdown p {
-  font-weight: lighter;
+  font-weight: normal;
 }
 .container .mainContainer .header .rightDiv .imageBox .dropdown p i {
   font-size: 1.2rem;
