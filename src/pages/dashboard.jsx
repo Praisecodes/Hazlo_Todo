@@ -15,13 +15,13 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 export default function Dashboard(){
-    const [TotalActivities, SetTotalActivities] = useState(0);
-    const [DueActivities, SetDueActivities] = useState(0);
-    const [CompletedActivities, SetCompletedActivities] = useState(0);
-    const [ArchivedActivities, SetArchivedActivities] = useState(0);
-    const [UnfinishedActivities, SetUnfinishedActivities] = useState(0);
-    const [TrashedActivities, SetTrashedActivities] = useState(0);
-    const [StarredActivities, SetStarredActivities] = useState(0);
+    const [TotalActivity, SetTotalActivities] = useState(0);
+    const [DueActivity, SetDueActivities] = useState(0);
+    const [CompletedActivity, SetCompletedActivities] = useState(0);
+    const [ArchivedActivity, SetArchivedActivities] = useState(0);
+    const [UnfinishedActivity, SetUnfinishedActivities] = useState(0);
+    const [TrashedActivity, SetTrashedActivities] = useState(0);
+    const [StarredActivity, SetStarredActivities] = useState(0);
     const [username, setUsername] = useState(localStorage.getItem('username'));
     const [token, setToken] = useState(localStorage.getItem('token'));
 
@@ -31,7 +31,42 @@ export default function Dashboard(){
         if(token == null || username == null){
             nav("/login");
         }
+    }, [token]);
+
+    console.log(token);
+
+    fetch("https://hazloapi.herokuapp.com/getactivitiescount.php",{
+        method: "POST",
+        headers: new Headers({
+            "Content-Type": "application/json",
+            "Authorization": token
+        })
     })
+    .then((res)=>{
+        let status = res.status;
+        switch(status){
+            case 100:
+                console.log("No result");
+                break;
+            case 200:
+                return res.json();
+                break;
+            case 404:
+                console.log("Not Found");
+                break;
+            case 500:
+                console.log("Server Error");
+                break;
+            default:
+                console.log("No option");
+        }
+    })
+    .then((data)=>{
+        if(data){
+            console.log(data);
+        }
+    })
+    .catch((err)=>{console.log(err)});
 
     return (
         <>
@@ -52,8 +87,8 @@ export default function Dashboard(){
                                 <p>
                                     Hello {username}! <br />
                                     <span>
-                                        {(UnfinishedActivities == 0)?"You have no unfinished tasks" : 
-                                        `Unfinished Task(s): ${UnfinishedActivities}`}
+                                        {(UnfinishedActivity == 0)?"You have no unfinished tasks" : 
+                                        `Unfinished Task(s): ${UnfinishedActivity}`}
                                     </span>
                                 </p> <br />
                                 <Link to="/activities" className="viewAll">
@@ -79,7 +114,7 @@ export default function Dashboard(){
                             </div>
                             <div className="text">
                                 <h1>
-                                    {TotalActivities}
+                                    {TotalActivity}
                                 </h1>
                                 <p>Total Activities</p>
                             </div>
@@ -90,7 +125,7 @@ export default function Dashboard(){
                             </div>
                             <div className="text">
                                 <h1>
-                                    {DueActivities}
+                                    {DueActivity}
                                 </h1>
                                 <p>Activities Due Today</p>
                             </div>
@@ -101,7 +136,7 @@ export default function Dashboard(){
                             </div>
                             <div className="text">
                                 <h1>
-                                    {CompletedActivities}
+                                    {CompletedActivity}
                                 </h1>
                                 <p>Activities Completed</p>
                             </div>
@@ -112,7 +147,7 @@ export default function Dashboard(){
                             </div>
                             <div className="text">
                                 <h1>
-                                    {ArchivedActivities}
+                                    {ArchivedActivity}
                                 </h1>
                                 <p>Archived Activities</p>
                             </div>
@@ -123,7 +158,7 @@ export default function Dashboard(){
                             </div>
                             <div className="text">
                                 <h1>
-                                    {UnfinishedActivities}
+                                    {UnfinishedActivity}
                                 </h1>
                                 <p>Unfinished Activities</p>
                             </div>
@@ -134,7 +169,7 @@ export default function Dashboard(){
                             </div>
                             <div className="text">
                                 <h1>
-                                    {TrashedActivities}
+                                    {TrashedActivity}
                                 </h1>
                                 <p>Trashed Activities</p>
                             </div>
@@ -145,7 +180,7 @@ export default function Dashboard(){
                             </div>
                             <div className="text">
                                 <h1>
-                                    {StarredActivities}
+                                    {StarredActivity}
                                 </h1>
                                 <p>Starred Activities</p>
                             </div>
