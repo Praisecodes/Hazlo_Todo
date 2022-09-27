@@ -37,10 +37,10 @@ export default function Dashboard(){
 
     fetch("https://hazloapi.herokuapp.com/getactivitiescount.php",{
         method: "POST",
-        headers: new Headers({
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${token}`
-        })
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({'token': token})
     })
     .then((res)=>{
         let status = res.status;
