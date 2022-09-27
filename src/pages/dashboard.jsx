@@ -40,7 +40,7 @@ export default function Dashboard(){
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({'token': token})
+        body: JSON.stringify({'token': localStorage.getItem('token')})
     })
     .then((res)=>{
         let status = res.status;
@@ -49,7 +49,7 @@ export default function Dashboard(){
                 console.log("No result");
                 break;
             case 200:
-                return res.json();
+                return res.text();
                 break;
             case 404:
                 console.log("Not Found");
