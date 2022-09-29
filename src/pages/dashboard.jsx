@@ -38,9 +38,9 @@ export default function Dashboard(){
     fetch("https://hazloapi.herokuapp.com/getactivitiescount.php",{
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({'token': localStorage.getItem('token')})
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        }
     })
     .then((res)=>{
         let status = res.status;
