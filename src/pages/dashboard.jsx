@@ -36,41 +36,9 @@ export default function Dashboard(){
 
     console.log(token);
 
-    // fetch("https://hazloapi.herokuapp.com/getactivitiescount.php",{
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //         "Authorization": `Bearer ${token}`
-    //     }
-    // })
-    // .then((res)=>{
-    //     let status = res.status;
-    //     switch(status){
-    //         case 100:
-    //             console.log("No result");
-    //             break;
-    //         case 200:
-    //             return res.text();
-    //             break;
-    //         case 404:
-    //             console.log("Not Found");
-    //             break;
-    //         case 500:
-    //             console.log("Server Error");
-    //             break;
-    //         default:
-    //             console.log("No option");
-    //     }
-    // })
-    // .then((data)=>{
-    //     if(data){
-    //         console.log(`I am from the backend ${data}`);
-    //     }
-    // })
-    // .catch((err)=>{console.log(err)});
     axios.post("https://hazloapi.herokuapp.com/getactivitiescount.php", {
         headers: {
-            "Authorization": `Bearer ${token}`
+            Authorization: `Bearer ${token}`
         }
     }).then((response)=>{console.log(response.data)})
 
