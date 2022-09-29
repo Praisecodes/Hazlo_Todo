@@ -51,6 +51,13 @@ function Signup(){
                                         draggable: false
                                     })
                                     break;
+                                case 304:
+                                    setSigningUp(false);
+                                    toast.error("User Already Exists",{
+                                        position: toast.POSITION.TOP_RIGHT,
+                                        draggable: false
+                                    });
+                                    break;
                                 case 500:
                                     console.log(res.statusText);
                                     setSigningUp(false);
