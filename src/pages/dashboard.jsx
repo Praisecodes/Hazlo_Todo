@@ -63,7 +63,7 @@ export default function Dashboard(){
     })
     .then((data)=>{
         if(data){
-            console.log(data);
+            console.log(`I am from the backend ${data}`);
         }
     })
     .catch((err)=>{console.log(err)});
