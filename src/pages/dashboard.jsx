@@ -36,7 +36,7 @@ export default function Dashboard(){
 
     console.log(token);
 
-    axios.post("https://hazloapi.herokuapp.com/getactivitiescount.php", {
+    axios.get("https://hazloapi.herokuapp.com/getactivitiescount.php", {
         headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`
         }
